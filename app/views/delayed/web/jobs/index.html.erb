@@ -7,7 +7,7 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-      <th>ID</th>
+      <th>Job Class</th>
       <th>Status</th>
       <th>Created At</th>
       <th>Run At</th>
@@ -20,7 +20,7 @@
     <% if jobs.any? %>
       <% jobs.each do |job| %>
         <tr>
-          <td><%= link_to "##{job.id}", job_path(job) %></td>
+          <td><%= link_to job.job_description, job_path(job) %></td>
           <td>
             <span class="<%= status_dom_class(job.status) %>">
               <%= job.status.capitalize %>

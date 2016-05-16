@@ -17,6 +17,7 @@ module Delayed
       def self.decorate job
         job = StatusDecorator.new job
         job = ActiveRecordDecorator.new job
+        job = ActiveJobDecorator.new job
         job
       end
     end
